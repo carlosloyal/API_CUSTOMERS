@@ -1,0 +1,64 @@
+body{
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(2,6,43,1) 100%, rgba(11,29,121,1) 100%, rgba(255,255,255,1) 100%, rgba(0,0,0,1) 100%);
+}
+
+
+button {
+    padding: 0.8em 1.8em;
+    border: 2px solid #000706;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #031110;
+   }
+   
+   button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #2d01a7;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   button:hover::before {
+    width: 105%;
+   }
+   
+   button:hover {
+    color: #111;
+   }
+   
+.card {
+    --color-1: rgb(178, 12, 211);
+ --color-2: rgb(5, 252, 248);
+ --color-3: rgb(28, 0, 48);
+ width: 190px;
+ height: 254px;
+ background: var(--color-3);
+ box-shadow: -10px -10px var(--color-1),
+              15px 10px var(--color-2);
+ transition: box-shadow 0.25s ease-in-out,
+              transform 0.25s ease-in-out;
+   }
+   
+.card:hover {
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    transform: scale(1.20);
+    margin-top: 30px;
+    margin-bottom: 30px;
+   }
+   
